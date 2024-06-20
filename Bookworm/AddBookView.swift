@@ -39,12 +39,7 @@ struct AddBookView: View {
                 Section("Write a review"){
                     TextField("Review", text: $review)
                     
-                    Picker("Rating", selection: $rating)
-                    {
-                        ForEach(0..<6){
-                            Text(String($0))
-                        }
-                    }
+                    RatingView(rating: $rating)
                     
                 }
                 
@@ -66,6 +61,6 @@ struct AddBookView: View {
     }
 }
 
-//#Preview {
-//    AddBookView()
-//}
+#Preview {
+    AddBookView()
+}
